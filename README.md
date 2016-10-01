@@ -9,4 +9,5 @@ This code provide a easy way  allow user to load the specific time region from a
 
 An example is present in test_axonread.ipynb file, ploting 12 sec data from a long time recording abf file.
 
-![figure_1](https://cloud.githubusercontent.com/assets/19654472/19011695/334d8f8c-876c-11e6-87d8-a4662d1f189d.png)
+![figure_1](https://cloud.githubusercontent.com/assets/19654472/19011742/9dc59a16-876d-11e6-9773-fa8b5f17366e.png)
+
