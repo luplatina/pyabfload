@@ -6,4 +6,7 @@ However, unlike the abfload in matlab. axonio does not allow users to load certa
 I actually strongly suggest the Axonio developer can make it improved in their later version. Reading the total length of abf is the 
 only option in current version axonio. That setting is fine fore small abf file, but it is very inconvenience  and impractical for large abf file.
 This code provide a easy way  allow user to load the specific time region from a large abf file. The key step or the main optimization is to extract useful parameters from the headreader function in axion and set the reading initial position and length careful in the numpy.memmap. I tried to keep this code follow axonio's data structure and function flows.
+
 An example is present in test_axonread.ipynb file, ploting 12 sec data from a long time recording abf file.
+
+![figure_1](https://cloud.githubusercontent.com/assets/19654472/19011695/334d8f8c-876c-11e6-87d8-a4662d1f189d.png)
