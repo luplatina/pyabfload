@@ -16,7 +16,7 @@ This code provides an easy way to load the data of specific time region from a l
 
 ##QUICK EXAMPLE
 An example is presented in test_axonread.ipynb file, ploting 12 sec data from a long time recording abf file.
-'''
+```
 import axonread_LuBo as AR
 start_t=4.0 #starting position of the reading region; 
 end_t=16.0 #ending position of the reading region;
@@ -39,6 +39,6 @@ plt.plot(ttrace[:],Vtrace[:])
 plt.xlabel('Time (sec)')
 plt.ylabel('Voltage (V)')
 plt.show()
-'''
+```
 ![figure_1](https://cloud.githubusercontent.com/assets/19654472/19011742/9dc59a16-876d-11e6-9773-fa8b5f17366e.png)
 
