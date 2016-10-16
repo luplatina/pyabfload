@@ -2,7 +2,7 @@
 Use python to efficiently load specific time region from large abf file.
 
 ##OVERVIEW
-abf (Axon Binary File) format is created for the storage of binary experimental data. It originates with the pCLAMP suite of data acquisition and analysis programs. It is widely used in Electrophysiology data aquisition. As a typical issue for data aquisition, the file size sometimes creat a memory problem, if the users only want to read and analyze a small segment from a large abf file. Such problem is inevitable for abf file in gap-free mode. Because with the highest sampling rate in pCLAMP, 30mins recording can generate over 1GB abf data easily. Reading such entire file into memory is inconvinient and impractical.
+abf (Axon Binary File) format is created for the storage of binary experimental data. It originates with the pCLAMP suite of data acquisition and analysis programs. It is widely used in Electrophysiology data aquisition. As a typical issue for data aquisition, large file size sometimes creat a memory problem, if the users only want to read and analyze a small segment from a large abf file. Such problem is inevitable for abf file in gap-free mode, as with the highest sampling rate in pCLAMP, 30mins recording can generate over 1GB abf data easily. Reading such entire file into memory is inconvinient and impractical.
 A reasonable solution is to extract the key information for a abf.head file and use numpy.memap which allowes reading small segments of large file without loading the entire file into memory.
 
 ##EXPLANATION
