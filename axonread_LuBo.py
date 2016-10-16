@@ -27,7 +27,7 @@ def abfload(fn,start_t,end_t):
     
     
     def reformat_integer_V1(data, nbchannel, header):
-        #transfer the binary data into the readable data format for the users;
+        #transfer the binary data into the readable format for the users;
         #all the transfer factors have been stored in header file.
         chans = [chan_num for chan_num in
                  header['nADCSamplingSeq'] if chan_num >= 0]
