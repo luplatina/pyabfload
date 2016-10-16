@@ -6,7 +6,7 @@ def abfload(fn,start_t,end_t):
     header = neo.io.AxonIO(filename=fn).read_header()#even though abf file could be large, all key informations are in heard file;
     si=1/(header['fADCSampleInterval']*header['nADCNumChannels']*1.e-6)#sampling rate
     nbchannel = header['nADCNumChannels']#number of channle;
-    BLOCKSIZE=512
+    BLOCKSIZE=512 #in an abf file; all sections are buffer in blocks of 512 bytes each. 
     if header['nDataFormat'] == 0:
         dt = np.dtype('i2')
     elif header['nDataFormat'] == 1:
