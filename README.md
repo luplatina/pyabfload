@@ -9,9 +9,10 @@ A previous module called [axonio](https://pythonhosted.org/neo/io.html) has alre
 This code provides an easy way to load the data of specific time region from a large abf file. A reasonable solution is to extract the key information from abf headfile and apply them into numpy.memap, which allowes reading small segments of large file without loading the entire file into memory. 
 numpy.memap creates a memory-map to an array stored in a binary file on disk. Memory-mapped files are used for accessing small segments of large files on disk without reading the entire file into memory. But it require user to specify the starting and ending position of the target data segment in the binary file.
 abf file has a proprietory design on its file format. its header is separated from its main data and include all the abstract information about the data, like sampling rate, channel number. These are key imput variable to make numpy.memap work for reading abf file.
+
 ![abf file structure](https://cloud.githubusercontent.com/assets/19654472/19421453/9750eb54-93cf-11e6-8afd-473723f56554.png)
 
-Based on the structure of the abf file shown above, I extracted useful parameters from head file and optimized the read position and length settings with numpy.memmap. I tried to keep this code follow axonio's data structure and function flows. axonio has very good "read_header" function. 
+Based on the structure of the abf file shown above, I extracted several key parameters from head file and optimized the read position and length settings with numpy.memmap. I tried to keep this code follow axonio's data structure and function flows. axonio has very good "read_header" function. 
 
 
 ##EXAMPLE
