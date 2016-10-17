@@ -1,5 +1,5 @@
-# optimized-version-abfload-in-python
-Use python to efficiently load specific time region from large abf file.
+# pyabfload
+Use python to load specific time region from large abf file.
 
 ##OVERVIEW
 abf (Axon Binary File) format is created for the storage of binary experimental data. It originates with the pCLAMP suite of data acquisition and analysis programs. It is widely used in Electrophysiology data aquisition. As a typical issue for data aquisition, large file size sometimes creat a memory problem, if the users only want to read and analyze a small segment from a large abf file. Such problem is inevitable for abf file in gap-free mode, as with the highest sampling rate in pCLAMP, 30mins recording can generate over 1GB abf data easily. Reading such entire file into memory is inconvinient and impractical. 
